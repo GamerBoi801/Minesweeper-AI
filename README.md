@@ -28,7 +28,7 @@ A **logic-based AI** that plays Minesweeper using **symbolic reasoning and set-b
   - Adjustable board size (`WIDTH`, `HEIGHT`) and number of mines (`MINES`).  
   - Responsive interface for different screen sizes.
 
----
+
 
 ## ⚙️ How the AI Thinks
 1. The AI maintains **3 sets**:
@@ -50,5 +50,14 @@ A set of neighboring cells and the count of mines among them:
 
 4. AI repeats this process iteratively **until no new inferences** can be made for which it makes a random move to a cell which it thinks will be safe.
 
-
-
+## Project Structure
+| File | Purpose |
+|------|---------|
+| `core/board.py` | Defines the `Minesweeper` game board, handles mine placement, neighbor counts, and game logic. |
+| `core/ai.py` | Defines the `MinesweeperAI` class, implements AI reasoning using sets, knowledge base, and logical inference. |
+| `gui/renderer.py` | Draws the board, cells, mines, and flags in the Pygame window. |
+| `gui/ui.py` | Handles user input, buttons (AI move, reset), and interaction between GUI and game logic. |
+| `gui/log_panel.py` | Displays the AI reasoning log panel with scroll support. |
+| `assets/fonts/OpenSans-Regular.ttf` | Font used for UI labels and log messages. |
+| `assets/images/flag.png` | Flag icon to mark suspected mines. |
+| `assets/images/mine.png` | Mine icon revealed when stepped on. |
