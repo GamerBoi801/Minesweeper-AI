@@ -1,0 +1,5 @@
+./__pycache__
+./.vscode
+./core/__pycache__
+./gui/__pycache__
+./mypyenv
